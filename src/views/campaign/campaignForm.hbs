@@ -1,0 +1,63 @@
+<div class="pt-6 container mx-auto px-4 text-white">
+  <h1 class="title is-3 has-text-violet">Create New Campaign</h1>
+
+  <form action="/campaigns/new/api" method="POST">
+    <div class="field">
+      <label class="label has-text-white">Title</label>
+      <div class="control">
+        <input
+          class="custom-input"
+          type="text"
+          name="title"
+          placeholder="Campaign title"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label has-text-white">Message</label>
+      <div class="control">
+        <textarea
+          class="textarea has-text-white"
+          style="background-color: rgb(var(--zinc-900)); outline: none; border: 1px solid rgb(var(--zinc-700))"
+          name="message"
+          placeholder="Write plain text or HTML here"
+          required
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label has-text-white">Recipients</label>
+      <div class="control">
+        <input
+          class="custom-input"
+          type="text"
+          name="recipients"
+          placeholder="Comma-separated emails (e.g. a@gmail.com, b@gmail.com)"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label has-text-white">Scheduled Time</label>
+      <div class="control">
+        <input
+          class="custom-input"
+          type="datetime-local"
+          name="scheduledTime"
+          required
+        />
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="control">
+      <button class="button" type="submit">
+        Schedule Campaign
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,51 @@
+<div class="pt-6 container mx-auto px-4">
+  <h1 class="title is-3 has-text-white is-capitalized">
+    {{campaign.title}}
+    <span class="has-text-violet">details</span>
+    <small class="tag mx-2 is-rounded is-info">{{campaign.status}}</small>
+  </h1>
+  <div style="background-color: rgb(var(--zinc-800));" class="p-4 smooth">
+    <small
+      class="has-text-grey pb-2 is-italic"
+    >{{campaign.scheduledTime}}</small>
+    <h2 class="has-text-violet pb-2">Message</h2>
+    <div class="p-2 smooth" style="background-color: rgb(var(--zinc-700));">
+      <p class="has-text-white is-capitalized">{{campaign.message}}</p>
+    </div>
+    <div class="mt-4">
+      <details>
+        <summary class="has-text-violet">Recipients ({{campaign.recipients.length}})</summary>
+        <ul>
+          {{#each campaign.recipients}}
+            <li class="has-text-grey-light">{{this}}</li>
+          {{/each}}
+        </ul>
+      </details>
+    </div>
+    <div class="mt-4">
+      <details>
+        <summary class="has-text-violet">View Logs ({{campaign.logs.length}})</summary>
+        <ul>
+          {{#each campaign.logs}}
+            <li
+              class="has-text-grey-light smooth p-3 my-2"
+              style="background-color: rgb(var(--zinc-700));"
+            >
+              <div class="is-flex">
+                <small
+                  class="has-weight-bold has-text-white"
+                >{{this.email}}</small>
+                <small
+                  class="tag is-info mx-2 is-rounded is-capitalized"
+                >{{this.status}}</small>
+              </div>
+              <small
+                class="has-text-grey pb-2 is-italic"
+              >{{this.updatedAt}}</small>
+            </li>
+          {{/each}}
+        </ul>
+      </details>
+    </div>
+  </div>
+</div>

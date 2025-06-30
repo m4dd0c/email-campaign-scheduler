@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>{{title}}</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body style="background-color: rgb(var(--zinc-900))">
+    {{> workspaceNavigation}}
+    <main class="pt-6 container mx-auto px-4" style="min-height: 100vh">
+      {{{body}}}
+    </main>
+    {{> footer}}
+  </body>
+</html>

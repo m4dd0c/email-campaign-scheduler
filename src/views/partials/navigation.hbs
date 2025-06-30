@@ -1,0 +1,63 @@
+<nav
+  class="navbar is-rounded is-dark"
+  role="navigation"
+  aria-label="main navigation"
+>
+  <div class="navbar-brand">
+    <a class="navbar-item has-text-weight-bold" href="/">
+      <img src="/img/logo.png" alt="Logo" height="35" class="smooth" />
+      <span class="ml-2 title is-5 has-text-white">ECS</span>
+    </a>
+
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="mainNavbar"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-start">
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link has-text-white">Campaign</a>
+      <div
+        class="navbar-dropdown dark-dropdown"
+        style="background-color: rgb(var(--zinc-800))"
+      >
+        <a class="navbar-item" href="/campaigns">All Campaigns</a>
+        <a class="navbar-item" href="/campaigns/new">Post a Campaign</a>
+      </div>
+    </div>
+
+    <div class="navbar-item">
+      <a class="has-text-white" href="/about">About</a>
+    </div>
+  </div>
+
+  <div id="mainNavbar" class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <a
+          href="https://github.com/m4dd0c/email-campaign-scheduler"
+          target="_blank"
+          class="button mr-2 is-rounded is-small"
+        >
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          <span>GitHub</span>
+        </a>
+        <a
+          class="button is-small"
+          style="border-radius: .5rem"
+          href="/campaigns/new"
+        >🚀 Get Started</a>
+      </div>
+    </div>
+  </div>
+</nav>

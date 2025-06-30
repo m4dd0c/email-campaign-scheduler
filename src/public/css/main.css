@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--zinc-50);
+  background-color: var(--zinc-950);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+  visibility: hidden;
+}
+:root {
+  --zinc-50: 250 250 250;
+  --zinc-100: 244 244 245;
+  --zinc-200: 228 228 231;
+  --zinc-300: 212 212 216;
+  --zinc-400: 161 161 170;
+  --zinc-500: 113 113 122;
+  --zinc-600: 82 82 91;
+  --zinc-700: 63 63 70;
+  --zinc-800: 39 39 42;
+  --zinc-900: 24 24 27;
+  --zinc-950: 9 9 11;
+  --violet-500: 139 92 246;
+}
+
+.has-text-violet {
+  color: rgb(var(--violet-500));
+}
+
+.has-background-violet {
+  background-color: rgb(var(--violet-500));
+}
+
+.has-background-dark {
+  background-color: rgb(var(--zinc-950));
+}
+.border {
+  border: 1px solid rgb(var(--zinc-500));
+}
+.smooth {
+  border-radius: 0.5rem;
+}
+.campaigns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.ecs-hero {
+  font-size: 15rem;
+  font-weight: 900;
+  z-index: 100;
+  position: absolute;
+  top: 55%;
+  left: -5%;
+  -webkit-text-stroke: 2px grey;
+  transition: all 1s ease-in-out;
+  color: transparent;
+  user-select: none;
+}
+.ecs-hero:hover {
+  -webkit-text-stroke: 2px white;
+  transform: scale(1.01);
+}
+
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.campaign-card {
+  background-color: rgb(24, 24, 27); /* zinc-800 fallback */
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgb(var(--zinc-500)) !important;
+  opacity: 1 !important;
+}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.dark {
+  background-color: var(--zinc-950);
+  color: var(--zinc-50);
+}
+
+.custom-input {
+  outline: none;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(var(--zinc-900));
+  border: 1px solid rgb(var(--zinc-700));
+  border-radius: 0.375rem;
+}
+.navbar {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 50%;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+  border-radius: 1rem;
+  background: hsla(240, 6%, 10%, 1);
+
+  background: linear-gradient(
+    180deg,
+    hsla(240, 6%, 10%, 1) 0%,
+    hsla(240, 4%, 16%, 1) 51%,
+    hsla(240, 6%, 10%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    180deg,
+    hsla(240, 6%, 10%, 1) 0%,
+    hsla(240, 4%, 16%, 1) 51%,
+    hsla(240, 6%, 10%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    180deg,
+    hsla(240, 6%, 10%, 1) 0%,
+    hsla(240, 4%, 16%, 1) 51%,
+    hsla(240, 6%, 10%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#18181B", endColorstr="#27272A", GradientType=1 );
+}
+
+.hero_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

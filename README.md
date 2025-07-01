@@ -62,9 +62,10 @@ The application will be available at: **http://localhost:4000**
 
 ## 🖥️ API Endpoints
 
-- `GET /api/v1/campaign` → List all campaigns
-- `POST /api/v1/campaign` → Create new campaign
-- `GET /api/v1/campaign/:id` → Get campaign details
+- `GET /campaigns` → View all campaigns
+- `GET /campaigns/api` → List all campaigns JSON
+- `POST /campaigns/new/api` → Create new campaign
+- `GET /campaigns/new` → View Create new compaign form
 - `GET /campaigns/get/:id` → View campaign in UI
 
 ## 🧪 Sample API Usage
@@ -142,7 +143,6 @@ npm test
 
 - **typescript** - Type safety
 - **@types/node** - Node.js type definitions
-- **nodemon** - Development auto-restart
 
 ## 🚀 Deployment
 
@@ -156,19 +156,6 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your-production-email@gmail.com
 SMTP_PASS=your-app-specific-password
-```
-
-### Docker Support (Optional)
-
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY . .
-RUN npm run build
-EXPOSE 3000
-CMD ["npm", "start"]
 ```
 
 ## 🧠 Future Improvements
@@ -210,12 +197,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Your Name**  
-_Built for Internshala Assignment — Satva Solutions_
+**Manish Kumar** 
 
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
-- Email: your.email@example.com
+- GitHub: [@m4dd0c](https://github.com/m4dd0c)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/m4dd0c)
+- Email: manishsuthar078@gmail.com
 
 ---
 
